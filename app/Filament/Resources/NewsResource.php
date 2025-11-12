@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\HtmlString;
 
 class NewsResource extends Resource
 {
@@ -63,12 +64,13 @@ class NewsResource extends Resource
                     ->searchable(),
                 TextColumn::make('isi')
                     ->label('Isi Berita')
-                    ->limit(50)
+                    ->limit(30)
+                    ->formatStateUsing(fn (string $state): HtmlString => new HtmlString($state))
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('ringkasan')
                     ->label('Ringkasan Berita')
-                    ->limit(50)
+                    ->limit(30)
                     ->sortable()
                     ->searchable(),
             ])

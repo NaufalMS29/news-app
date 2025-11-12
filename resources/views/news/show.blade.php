@@ -6,9 +6,10 @@
 <div class="space-y-8">
     {{-- Detail berita --}}
     <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-        <h2 class="text-2xl font-bold mb-1 text-gray-800">{{ $news->title }}</h2>
+        <h2 class="text-2xl font-bold mb-1 text-gray-800">{{ $news->judul }}</h2>
         <p class="text-gray-500 mb-4">Oleh <span class="font-semibold">{{ $news->wartawan->nama }}</span></p>
         <p class="text-gray-700 leading-relaxed">{{ $news->ringkasan }}</p>
+        {!! $news->isi !!}
     </div>
 
     {{-- Form komentar --}}

@@ -7,53 +7,132 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# 📰 News App – Laravel 12 & Filament
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Nama:** Naufal Maulana Saputra  
+**NIM:** 4523210083  
+**Pemrograman Berbasis Web (A)**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Aplikasi manajemen berita berbasis web menggunakan **Laravel** dan **Filament Admin Panel**.  
+Dibuat untuk mempermudah pengelolaan data wartawan, berita, dan komentar melalui antarmuka admin yang modern dan responsif.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ⚙️ Fitur Aplikasi
+- 🧾 Menampilkan daftar berita dengan pagination  
+- 📰 Menampilkan detail berita  
+- 💬 Menampilkan komentar pada berita  
+- 👨‍💼 Relasi antara Wartawan, berita, dan komentar  
+- 🧱 Seeder otomatis untuk menghasilkan data dummy  
+- 🎨 Tampilan clean & responsive menggunakan Tailwind CSS  
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🧰 Teknologi yang Digunakan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Teknologi | Fungsi |
+|------------|---------|
+| **Laravel 12** | Framework utama untuk backend |
+| **PHP 8.4+** | Bahasa pemrograman backend |
+| **MySQL** | Database untuk menyimpan data berita, wartawan, dan komentar |
+| **Tailwind CSS** | Framework CSS untuk tampilan frontend |
+| **Vite** | Build tool modern untuk frontend |
+| **Node.js & NPM** | Menjalankan dependency frontend |
+| **Composer** | Manajemen dependency PHP |
+| **Filament 3.x** | Admin Panel |
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🪜 Langkah Instalasi
 
-### Premium Partners
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/farhanScripts/news-app
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 2️⃣ Install Depedency
+```bash
+composer install
+npm install
+```
 
-## Contributing
+### 3️⃣ Konfigurasi Environment & Generate Key Aplikasi
+```bash
+# Konfigurasi Environment
+cp .env.example .env
+# Generate Key Aplikasi
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 4️⃣ Jalankan Migrasi 
+```bash
+# Migrasi
+php artisan migrate
+# seeder
+php artisan db:seed
+```
 
-## Code of Conduct
+### 5️⃣ Build Aset Frontend & Jalankan Aplikasi
+```bash
+# Build Aset
+npm run dev
+# atau untuk versi production
+npm run build
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Jalankan Aplikasi
+php artisan serve
+```
+- URL: http://127.0.0.1:8000 atau http://localhost:8000
 
-## Security Vulnerabilities
+### 6️⃣ Akses Admin Panel
+```bash
+php artisan make:filament-user
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Name:
+# input nama user filament
+# Email address:
+# input email user filament
+# password:
+# input password user filament
+```
 
-## License
+Lakukan login filament jika sudah menjalankan akses admin panel:
+- URL: http://127.0.0.1:8000/admin atau http://localhost:8000/admin
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# 📸 Hasil Dokumentasi Tugas
+## Tampilan Daftar Berita
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/75d89aa9-bb65-4f5d-87d9-838dafbae041" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1794fa47-4ed0-4f9c-81e3-2c338df80ba8" />
+
+## Tampilan Detail Berita
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/27bc606c-aaa3-4caf-87e4-3076ff40926d" />
+<img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/7b04ef5a-24e0-4f4c-9a90-8ac258e4f004" />
+
+## Tampilan Admin Filament (Wartawan)
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/476a6113-8c77-46e8-835b-492260652d1e" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a56cc7ab-8e02-49c6-9cda-de7e35e0212c" />
+<img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/64d9a6e1-b7bc-4777-9e9e-58c962e0a8eb" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b40686af-dec1-4880-bd13-88928c195423" />
+
+## Tampilan Admin Filament (News)
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f767763f-dbc3-425e-9d91-9c0320b085cf" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/15aaac98-2002-48b4-82b8-c7da3ea53f57" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/548c279c-84dc-4ef9-a853-2d3d0a843118" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/9cdacc8d-d96a-4e21-9b8d-a6fdf67962d9" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/652d0827-e72e-4874-8c7e-290c5a30b539" />
+
+## Tampilan Admin Filament (Komentar)
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/dc80d547-c2ce-4a21-b0d0-ac6a9ed3183e" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/6d388d25-0987-4a41-8461-a8d74e762560" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c9d1f269-3920-4a95-8da3-b02d36d9c1c5" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f90704f1-df67-4070-88f6-e7b7c737b313" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/da0b0d2f-e954-43ec-9b2e-3ecd387a2972" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/e4364d59-eca7-413c-a694-dc1607af273d" />
+<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/aadef8ec-9ca2-4f9b-8b48-86dd85778388" />
+
+
+
+
+
+
+
+
+

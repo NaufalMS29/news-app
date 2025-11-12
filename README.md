@@ -45,7 +45,7 @@ Dibuat untuk mempermudah pengelolaan data wartawan, berita, dan komentar melalui
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/farhanScripts/news-app
+git clone https://github.com/farhanScripts/news-app.git
 ```
 
 ### 2️⃣ Install Depedency
